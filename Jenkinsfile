@@ -21,6 +21,7 @@ pipeline {
         }
         stage ('Build Project'){
             steps {
+                sh 'sudo rm -rf sample-app'
                 sh 'sudo composer create-project laravel/laravel sample-app'
             }
         }
