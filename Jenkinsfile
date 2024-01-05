@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Deploy Project'){
             steps {
-                sh 'cd sample-app && sudo nohup php artisan serve &'
+                sh 'cd sample-app && sudo nohup php artisan serve'
             }
         } 
         stage('Testing'){
