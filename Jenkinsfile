@@ -19,17 +19,17 @@ pipeline {
                 sh 'sudo mv composer.phar /usr/local/bin/composer'
             }
         }
-        stage ('Build Project'){
+        stage('Build Project'){
             steps {
                 sh 'sudo rm -rf sample-app'
                 sh 'sudo composer create-project laravel/laravel sample-app'
             }
         }
-        stage ('Deploy Project'){
+        stage('Deploy Project'){
             steps {
-                sh 'cd sample-app && sudo php artisan serve &'
+                sh 'cd sample-app && sudo php artisan serve'
             }
-        }
+        } 
         stage('Testing'){
             steps {
                 script {
