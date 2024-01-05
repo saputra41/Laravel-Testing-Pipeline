@@ -9,7 +9,7 @@ pipeline {
 
                 // PHP & its required extensions
                 sh 'sudo add-apt-repository ppa:ondrej/php'
-                sh 'sudo apt-get install -y php8.2 php8.2-fpm php8.2-bcmath php8.2-curl php8.2-imagick php8.2-intl php-json php8.2-mbstring php8.2-mysql php8.2-xml php8.2-zip'
+                sh 'sudo apt-get install -y -S php8.2 php8.2-fpm php8.2-bcmath php8.2-curl php8.2-imagick php8.2-intl php-json php8.2-mbstring php8.2-mysql php8.2-xml php8.2-zip'
 
                 // Composer installation to build and run project
                 sh '''sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"'''
